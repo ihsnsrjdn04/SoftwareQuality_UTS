@@ -1,0 +1,15 @@
+{
+  "users": [
+    {
+      "email": "admin@gmail.com",
+      "password": "password123"
+    }
+  ],
+  "questions": [
+    {
+      "q": "Apa itu HTML?",
+      "options": ["Markup", "Style", "Database"],
+      "answer": "Markup"
+    }
+  ]
+}
