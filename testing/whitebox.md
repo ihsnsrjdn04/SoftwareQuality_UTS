@@ -61,12 +61,7 @@ Jika jawaban benar:
 
 ### 1. Desk Checking
 Modul Login (script.js)
-if(email === "admin@gmail.com" && password === "password123"){
-    alert("Login berhasil");
-    window.location = "dashboard.html";
-} else {
-    alert("Login gagal");
-}
+
 Hasil Desk Checking
 
 | Input Email                               | Input Password | Output         |
@@ -78,3 +73,41 @@ Hasil Desk Checking
 
 
 Kesimpulan: Logika percabangan berjalan sesuai kebutuhan.
+### 2. Code Walkthrough
+Fungsi startExam()
+Alur Program
+User memasukkan token.
+Sistem membandingkan token dengan "CBT2024".
+Jika sesuai → return true.
+Jika tidak sesuai → return false.
+
+Hail walkthrough
+| Skenario    | Hasil |
+| ----------- | ----- |
+| Token benar | true  |
+| Token salah | false |
+
+3. Formal Inspection
+Temuan Kode
+Fungsi calculateScore()
+export function calculateScore(correct, total){
+
+    return Math.round((correct / total) * 100);
+   
+}
+Potensi Bug
+
+Jika:
+
+calculateScore(5,0)
+
+akan menghasilkan:
+
+Infinity
+
+Rekomendasi
+
+if(total === 0){
+    return 0;
+}
+
