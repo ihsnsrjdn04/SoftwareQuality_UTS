@@ -58,3 +58,23 @@ Jika jawaban benar:
 - hasil ditampilkan  
 
 ---
+
+### 1. Desk Checking
+Modul Login (script.js)
+if(email === "admin@gmail.com" && password === "password123"){
+    alert("Login berhasil");
+    window.location = "dashboard.html";
+} else {
+    alert("Login gagal");
+}
+Hasil Desk Checking
+
+| Input Email                               | Input Password | Output         |
+| ----------------------------------------- | -------------- | -------------- |
+| [admin@gmail.com](mailto:admin@gmail.com) | password123    | Login berhasil |
+| [admin@gmail.com](mailto:admin@gmail.com) | salah          | Login gagal    |
+| [user@gmail.com](mailto:user@gmail.com)   | password123    | Login gagal    |
+| kosong                                    | kosong         | Login gagal    |
+
+
+Kesimpulan: Logika percabangan berjalan sesuai kebutuhan.
